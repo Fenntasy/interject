@@ -1,8 +1,8 @@
 {
-  "name": "interject",
+  "name": "remark-serve",
   "version": "0.0.1",
   "description": "display remark slides inside a directory",
-  "homepage": "https://github.com/Fenntasy/interject",
+  "homepage": "https://github.com/Fenntasy/remark-serve",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Fenntasy/interject.git"
+    "url": "https://github.com/Fenntasy/remark-serve.git"
   },
   "main": "index.js",
   "bin": {
-    "interject": "index.js"
+    "remark-serve": "index.js"
   }
 }
