@@ -1,0 +1,17 @@
+{
+  "name": "interject",
+  "version": "0.0.1",
+  "description": "display remark slides inside a directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Vincent Billey",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "bin": {
+    "interject": "index.js"
+  }
+}
