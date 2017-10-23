@@ -2,6 +2,7 @@
   "name": "interject",
   "version": "0.0.1",
   "description": "display remark slides inside a directory",
+  "homepage": "https://github.com/Fenntasy/interject",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -11,6 +12,11 @@
   "dependencies": {
     "express": "^4.16.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fenntasy/interject.git"
+  },
+  "main": "index.js",
   "bin": {
     "interject": "index.js"
   }
