@@ -1,6 +1,6 @@
 {
   "name": "remark-serve",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "display remark slides inside a directory",
   "homepage": "https://github.com/Fenntasy/remark-serve",
   "main": "index.js",
@@ -16,7 +16,6 @@
     "type": "git",
     "url": "https://github.com/Fenntasy/remark-serve.git"
   },
-  "main": "index.js",
   "bin": {
     "remark-serve": "index.js"
   }

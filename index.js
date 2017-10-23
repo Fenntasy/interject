@@ -23,6 +23,13 @@ const findSlides = path =>
   });
 
 const app = express();
+
+// Applying most used directories for assets
+app.use("/assets", express.static("assets"));
+app.use("/public", express.static("public"));
+app.use("/resources", express.static("resources"));
+app.use("/images", express.static("images"));
+
 app.get("/:slide", function(request, result) {
   const slide = request.params.slide;
   if (fs.existsSync(slide)) {
