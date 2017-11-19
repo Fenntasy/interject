@@ -1,6 +1,6 @@
 {
   "name": "remark-serve",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "display remark slides inside a directory",
   "homepage": "https://github.com/Fenntasy/remark-serve",
   "main": "index.js",
@@ -10,7 +10,8 @@
   "author": "Vincent Billey",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "read-yaml": "^1.1.0"
   },
   "repository": {
     "type": "git",
