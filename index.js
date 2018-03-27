@@ -6,7 +6,7 @@ const sass = require("node-sass");
 const util = require("util");
 const { exec } = require("child_process");
 const { intersection } = require("lodash");
-const tildeImporter = require('node-sass-tilde-importer');
+const tildeImporter = require("node-sass-tilde-importer");
 
 const glob = util.promisify(require("glob"));
 const readYaml = util.promisify(require("read-yaml"));
@@ -75,7 +75,7 @@ const getStyles = yamlOptions => {
                 : fs.readFileSync(url);
             return `<style>${style}</style>`;
           } catch (e) {
-            console.warn(e)
+            console.warn(e);
             return `<style></style>`;
           }
         }
@@ -98,8 +98,8 @@ readOptions()
   .then(yamlOptions => {
     if (yamlOptions.assets) {
       Object.keys(yamlOptions.assets).forEach(route => {
-        app.use(route, express.static(yamlOptions.assets[route]))
-      })
+        app.use(route, express.static(yamlOptions.assets[route]));
+      });
     }
     const pattern = yamlOptions.pattern ? yamlOptions.pattern : "*.md";
     return glob(pattern, { ignore: ["node_modules/**"] });
@@ -108,19 +108,19 @@ readOptions()
     Array.from(new Set(slides.map(path.dirname))).forEach(directory => {
       // Applying most used directories for assets
       app.use(
-        path.join(path.dirname(directory), "assets"),
-        express.static(path.join(path.dirname(directory), "assets"))
+        "/" + path.join(directory, "assets"),
+        express.static(path.join(directory, "assets"))
       );
       app.use(
-        path.join(path.dirname(directory), "public"),
+        "/" + path.join(path.dirname(directory), "public"),
         express.static(path.join(path.dirname(directory), "public"))
       );
       app.use(
-        path.join(path.dirname(directory), "resources"),
+        "/" + path.join(path.dirname(directory), "resources"),
         express.static(path.join(path.dirname(directory), "resources"))
       );
       app.use(
-        path.join(path.dirname(directory), "images"),
+        "/" + path.join(path.dirname(directory), "images"),
         express.static(path.join(path.dirname(directory), "images"))
       );
     });
